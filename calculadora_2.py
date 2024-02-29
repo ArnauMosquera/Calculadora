@@ -30,6 +30,7 @@ def arcoseno(a):
 def arctangente(a):
     return math.atan(a)
 def factorial(a):
+    #max num1=1558
     return math.factorial(a)
 
 def calculadora():
@@ -50,7 +51,7 @@ def calculadora():
     print("14.Salir")
 
     while True:
-        opcion = input("Introduce una opcion del (1-13): ")
+        opcion = input("Introduce una opcion del (1-14): ")
         if opcion in ['1', '2', '3', '4', '5']:
             num1 = int(input("Ingrese el primero número: "))
             num2 = int(input("Ingrese el segundo número: "))
@@ -58,32 +59,33 @@ def calculadora():
             num1 = int(input("Ingrese el número: "))
         
         if opcion == '1':
-            print("Resultado:", suma(num1, num2))
+            print("Resultado de la suma:", suma(num1, num2))
         elif opcion == '2':
-            print("Resultado:", resta(num1, num2))
+            print("Resultado de la resta:", resta(num1, num2))
         elif opcion == '3':
-            print("Resultado:", producto(num1, num2))
+            print("Resultado de la multiplicación:", producto(num1, num2))
         elif opcion == '4':
-            print("Resultado:", division(num1, num2))
+            print("Resultado de la división:", division(num1, num2))
         elif opcion == '5':
-            print("Resultado:", potencia(num1, num2))
+            print("Resultado de la potencia:", potencia(num1, num2))
         elif opcion == '6':
-            print("Resultado:", raiz_cuadrada(num1))
+            print("Resultado de la raiz cuadrada:", raiz_cuadrada(num1))
         elif opcion == '7':
-            print("Resultado:", seno(num1))
+            print("Resultado del seno:", seno(num1))
         elif opcion == '8':
-            print("Resultado:", coseno(num1))
+            print("Resultado del coseno:", coseno(num1))
         elif opcion == '9':
-            print("Resultado:", tangente(num1))
+            print("Resultado de la tangente:", tangente(num1))
         elif opcion == '10':
-            print("Resultado:", arseno(num1))
+            print("Resultado del arcseno:", arseno(num1))
         elif opcion == '11':
-            print("Resultado:", arcoseno(num1))
+            print("Resultado del arcoseno:", arcoseno(num1))
         elif opcion == '12':
-            print("Resultado:", arctangente(num1))
+            print("Resultado de la arctangente:", arctangente(num1))
         elif opcion == '13':
-            print("Resultado:", factorial(num1))
+            print("Resultado del factorial:", factorial(num1))
         elif opcion == '14':
+            print("Hasta luego.")
             break
         else:
                 print("Opción no válida. Por favor, seleccione una opción válida.")
