@@ -32,6 +32,11 @@ def arctangente(a):
 def factorial(a):
     #max num1=1558
     return math.factorial(a)
+def g_r(a):
+    return math.radians(a)
+def r_g(a):
+    return math.degrees(a)
+
 
 def calculadora():
     print("Calculadora cientifica: \nEscoge una de las siguientes opciones:")
@@ -48,16 +53,18 @@ def calculadora():
     print("11.Arccoseno")
     print("12.Arctangente")
     print("13.Factorial")
-    print("14.Salir")
+    print("14.Passar de radiantes a grados")
+    print("15.Passar de grados a radiantes")
+    print("16.Salir")
 
     while True:
-        opcion = input("Introduce una opcion del (1-14): ")
+        opcion = input("Introduce una opcion del (1-16): ")
         if opcion in ['1', '2', '3', '4', '5']:
-            num1 = int(input("Ingrese el primero número: "))
-            num2 = int(input("Ingrese el segundo número: "))
-        elif opcion in ['6', '7', '8', '9', '10', '11', '12', '13']:
-            num1 = int(input("Ingrese el número: "))
-        
+            num1 = float(input("Ingrese el primero número: "))
+            num2 = float(input("Ingrese el segundo número: "))
+        elif opcion not in ['1', '2', '3', '4', '5', '16']:
+            num1 = float(input("Ingrese el número: "))
+
         if opcion == '1':
             print("Resultado de la suma:", suma(num1, num2))
         elif opcion == '2':
@@ -85,6 +92,10 @@ def calculadora():
         elif opcion == '13':
             print("Resultado del factorial:", factorial(num1))
         elif opcion == '14':
+            print(num1, "radiantes son", r_g(num1), "grados")
+        elif opcion == '15':
+            print(num1, "grados son", g_r(num1), "radiantes")
+        elif opcion == '16':
             print("Hasta luego.")
             break
         else:
