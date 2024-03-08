@@ -1,7 +1,5 @@
 import math
-import time
-a = 0
-b = 0
+
 def suma(a,b):
     return a+b
 def resta(a,b):
