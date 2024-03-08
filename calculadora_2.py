@@ -34,6 +34,12 @@ def g_r(a):
     return math.radians(a)
 def r_g(a):
     return math.degrees(a)
+def tetra(a,b):
+    result = 1
+    for _ in range(b):
+        result = a ** result
+    return result
+
 
 
 def calculadora():
@@ -53,14 +59,15 @@ def calculadora():
     print("13.Factorial")
     print("14.Passar de radiantes a grados")
     print("15.Passar de grados a radiantes")
-    print("16.Salir")
+    print("16.Tetracion")
+    print("17.Salir")
 
     while True:
         opcion = input("Introduce una opcion del (1-16): ")
-        if opcion in ['1', '2', '3', '4', '5']:
+        if opcion in ['1', '2', '3', '4', '5', '16']:
             num1 = float(input("Ingrese el primero número: "))
             num2 = float(input("Ingrese el segundo número: "))
-        elif opcion not in ['1', '2', '3', '4', '5', '16']:
+        elif opcion not in ['1', '2', '3', '4', '5', '16', '17']:
             num1 = float(input("Ingrese el número: "))
 
         if opcion == '1':
@@ -94,6 +101,8 @@ def calculadora():
         elif opcion == '15':
             print(num1, "grados son", g_r(num1), "radiantes")
         elif opcion == '16':
+            print("Resultado de la tetracion:", tetra(num1, num2))
+        elif opcion == '17':
             print("Hasta luego.")
             break
         else:
