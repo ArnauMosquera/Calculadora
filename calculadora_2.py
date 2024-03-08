@@ -36,8 +36,8 @@ def r_g(a):
     return math.degrees(a)
 def tetra(a,b):
     result = 1
-    for _ in range(b):
-        result = a ** result
+    for _ in range(int(b)):
+        result = math.pow(a,result)
     return result
 
 
@@ -63,7 +63,7 @@ def calculadora():
     print("17.Salir")
 
     while True:
-        opcion = input("Introduce una opcion del (1-16): ")
+        opcion = input("Introduce una opcion del (1-17): ")
         if opcion in ['1', '2', '3', '4', '5', '16']:
             num1 = float(input("Ingrese el primero número: "))
             num2 = float(input("Ingrese el segundo número: "))
